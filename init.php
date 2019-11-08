@@ -1,6 +1,5 @@
 <?php
-
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $app = new \atk4\ui\App('Interactivity');
 $app->initLayout('Centered');
