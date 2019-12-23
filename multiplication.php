@@ -2,6 +2,7 @@
 require'init.php';
 
 $app->add(['Header', 'Multiplication Table']);
+$item[1]->addClass('blue active item');
 
 $seg = $app->add(['ui'=>'segment']);
 

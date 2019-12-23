@@ -1,5 +1,15 @@
 {
-  "require":{
-    "atk4/ui": "^1.2"
-  }
+    "require": {
+        "atk4/data": "*",
+        "psy/psysh": "^0.7.2",
+        "atk4/ui": "^1.7",
+        "atk4/api": "^0.2.0",
+        "atk4/login": "^1.0",
+        "php-unit-conversion/php-unit-conversion": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }       
+    }
 }
