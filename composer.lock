@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "00d964db5452acd973a28375ca7c0e8a",
+    "content-hash": "0e2e8e6c254c7a528746884a768e2fd8",
     "packages": [
         {
             "name": "atk4/core",
@@ -179,123 +179,6 @@
                 "sql"
             ],
             "time": "2019-12-02T01:55:48+00:00"
-        },
-        {
-            "name": "atk4/login",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/atk4/login.git",
-                "reference": "e1dd78ec924ed2f2df059bf99ad1c30723cb9531"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/atk4/login/zipball/e1dd78ec924ed2f2df059bf99ad1c30723cb9531",
-                "reference": "e1dd78ec924ed2f2df059bf99ad1c30723cb9531",
-                "shasum": ""
-            },
-            "require": {
-                "atk4/ui": "*",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "atk4/schema": "*",
-                "behat/behat": "^3.4",
-                "behat/mink-extension": "^2.2",
-                "behat/mink-zombie-driver": "^1.4",
-                "fzaninotto/faker": "*",
-                "phpunit/phpcov": "^3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "atk4\\login\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Romans Malinovskis",
-                    "email": "romans@agiletoolkit.org",
-                    "homepage": "https://nearly.guru/"
-                }
-            ],
-            "description": "Login and User module for Agile UI",
-            "homepage": "https://github.com/atk4/login",
-            "keywords": [
-                "Agile",
-                "acl",
-                "agile ui",
-                "atk4",
-                "auth",
-                "data",
-                "framework",
-                "login",
-                "user"
-            ],
-            "time": "2018-04-06T13:41:29+00:00"
-        },
-        {
-            "name": "atk4/schema",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/atk4/schema.git",
-                "reference": "2d39d8f9e4a8a043f052437883298cc885143bc0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/atk4/schema/zipball/2d39d8f9e4a8a043f052437883298cc885143bc0",
-                "reference": "2d39d8f9e4a8a043f052437883298cc885143bc0",
-                "shasum": ""
-            },
-            "require": {
-                "atk4/dsql": "^2.0",
-                "php": ">=7.2.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "*",
-                "phpunit/dbunit": ">=1.2",
-                "phpunit/phpcov": "*",
-                "phpunit/phpunit": "<6"
-            },
-            "suggest": {
-                "atk4/data": "*",
-                "atk4/ui": "*",
-                "jdorn/sql-formatter": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "atk4\\schema\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Romans Malinovskis",
-                    "email": "romans@agiletoolkit.org",
-                    "homepage": "https://nearly.guru/"
-                }
-            ],
-            "description": "Agile Schema",
-            "homepage": "http://github.com/atk4/schema",
-            "keywords": [
-                "Agile",
-                "alter",
-                "data",
-                "framework",
-                "migration",
-                "schema",
-                "sql"
-            ],
-            "time": "2019-12-02T03:10:05+00:00"
         },
         {
             "name": "atk4/ui",
