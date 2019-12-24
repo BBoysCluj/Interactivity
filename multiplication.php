@@ -2,7 +2,7 @@
 require'init.php';
 
 $app->add(['Header', 'Multiplication Table']);
-$item[1]->addClass('blue active item');
+$item[1]->setStyle('color','red !important');
 
 $seg = $app->add(['ui'=>'segment']);
 

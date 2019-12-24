@@ -4,7 +4,7 @@ use PhpUnitConversion\Unit;
 
 $debug = true;
 $si = ['Amount','Area','Length','Mass','Temperature','Time','Volume'];
-$path = 'vendor/php-unit-conversion/php-unit-conversion/src/Unit';
+$path = '../../vendor/php-unit-conversion/php-unit-conversion/src/Unit';
 
 // add all files from each UNIT directory in $si_files
 //$si_files[0] will  have all the units of measurement from Amount folder. in the format filename.php
@@ -17,8 +17,10 @@ foreach ($si as $key=>$units) {
         $si_units[$key][$i] = substr($si_files[$key][$i],0,$position);
 }}
 $app->add(['Header', 'Unit Coonversions -> Powered by php-unit-conversion ']);
-$item[0]->addClass('blue active item');
-$tabs = $app->add('Tabs',['class'=>['blue inverted']]);
+// $item[0]->addClass('ui active');
+$item[0]->setStyle('color','red !important');
+
+$tabs = $app->add('Tabs',['class'=>['ui blue ']]);
 
 foreach ($si as $key=>$units) { //we are building the tabs and adding the fields
     $tabs->addTab($units, 
@@ -32,10 +34,15 @@ foreach ($si as $key=>$units) { //we are building the tabs and adding the fields
             $col_right = $col->addColumn(4);
             $f=$col_mid->add('Form');
             $f->buttonSave->set('Calculate');
-            $g=$f->addGroup('Conversion Tool',['class'=>['ui group red inverted']]);
-                $g->addField('from',['class'=>['ui label blue '],$dd1[$key],'label'=>'From:'])->set(3); 
-                $g->addField('to',['class'=>['ui label blue '],$dd2[$key],'label'=>'To:'])->set(4);
-                $g->addField('value',['class'=>['label blue '],'label'=>'Value']);
+            
+         //   $f->buttonSave->set('style','background:green');
+            $f->buttonSave->addStyle('background','green');
+            $g=$f->addGroup('Conversion Tool');
+                $g->addField('from',['class'=>['ui label blue '],$dd1[$key],'label'=>'From:'])->set(2);
+                $g->addField('to',['class'=>['ui label blue '],$dd2[$key],'label'=>'To:'])->set(3);
+                $g->addField('value',['class'=>['ui label blue '],'label'=>'Value','inputType'=>'number']);
+//                $f->add(new \atk4\ui\FormField\Line(['placeholder'=>'Nu vreau']));
+
                 
             //our Area of Conversion. wee need to use classes from $units
             $f->OnSubmit(
@@ -52,8 +59,21 @@ foreach ($si as $key=>$units) { //we are building the tabs and adding the fields
                 $converted = new  $to_class;
                 $original->to($converted);
                 //$col_right->add(['Label', 'Conversions of ', 'detail' => $si_units[$key][$_GET['from']].' to '.$si_units[$key][$_GET['to']] ]);
-                $col_right->add(['Label', 'Value of', 'class'=>['big blue circular'],'detail' => $_GET['value'].' '.$si_units[$key][$_GET['from']]]);
-                $col_right->add(['Label', 'Equals to: ','class'=>['massive ge green circular'], 'detail' => $converted->format(2,true)]);
+                $col_right->add([
+                    'Label', 
+                    'Value of',
+                    'pointing below big blue circular',
+                    'detail' => $_GET['value'].' '.$si_units[$key][$_GET['from']]
+                ]);
+                $col_right->add([
+                    'Label',
+                    'Equals to: ',
+                    'massive green circular',
+                    'style'=>['color' => 'red',  'border'=> '5px solid red'], 
+                    'detail' => $converted->format(2,true)
+                ]);
+                
+               
             }
 
     });

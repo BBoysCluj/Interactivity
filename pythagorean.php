@@ -2,7 +2,7 @@
 require'init.php';
 
 $app->add(['Header', 'Pythagorean Theorem']);
-$item[2]->addClass('blue active item');
+$item[2]->setStyle('color','red !important');
 $col = $app->add('Columns');
 
 $col_left = $col->addColumn(4);

@@ -7,7 +7,7 @@ $number = round(($max + $min) / 2);
 
 
 $app->add(['Header', "Is your number $number ?", 'size'=>1]);
-$item[3]->addClass('red active item');
+$item[3]->setStyle('color','red !important');
 $app->add('Text')
     ->addParagraph("(It seems that your number is between $max and $min)");
 

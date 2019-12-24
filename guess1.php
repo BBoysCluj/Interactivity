@@ -2,7 +2,7 @@
 require'init.php';
 
 $app->add(['Header', 'Guess the number - Instructions']);
-$item[3]->addClass('red active item');
+$item[3]->setStyle('color','red !important');
 $text = $app->add(['Text']);
 $text->addParagraph('This game demonstrates how to use links, buttons, headers and text in Agile Toolkit.');
 $text->addParagraph("You have to pick a number in interval 1-100. Next you press 'Start game!' button!");
