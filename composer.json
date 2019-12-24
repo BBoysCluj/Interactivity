@@ -1,7 +1,7 @@
 {
-    "name": "Adrian",
-    "type": "library",
-    "description": "Agile Toolkit",
+
+
+
     "require": {
         "psy/psysh": "^0.7.2",
         "php-unit-conversion/php-unit-conversion": "^1.2",

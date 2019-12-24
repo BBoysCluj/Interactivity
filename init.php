@@ -1,6 +1,6 @@
 <?php
 
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Interactivity by BBoysCluj');
 $app->initLayout(['Centered','image'=>'https://cdn.clipart.email/be8d459a8644c87807a6bb17e6271b1f_statue-of-liberty-silhouette-download-at-vectorportal_660-660.jpeg']);
 $menu = $app->add(['Menu']);

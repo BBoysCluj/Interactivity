@@ -4,7 +4,7 @@ use PhpUnitConversion\Unit;
 
 $debug = true;
 $si = ['Amount','Area','Length','Mass','Temperature','Time','Volume'];
-$path = '../../vendor/php-unit-conversion/php-unit-conversion/src/Unit';
+$path = 'vendor/php-unit-conversion/php-unit-conversion/src/Unit';
 
 // add all files from each UNIT directory in $si_files
 //$si_files[0] will  have all the units of measurement from Amount folder. in the format filename.php
